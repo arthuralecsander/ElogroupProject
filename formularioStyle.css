@@ -1,0 +1,19 @@
+body{
+ background-image: url(imagens/imagem1.jpg)
+}
+label{
+    color: white;
+}
+h1{
+    color: white;
+    font-size: 300%;  
+}
+
+form{
+
+    text-align: center;
+    font-size: large;
+}
+.btn-primary{
+    margin-left: 5%;
+}

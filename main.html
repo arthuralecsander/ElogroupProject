@@ -1,43 +1,63 @@
-
-<form action="validar-form" class="form" >
-    <div>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome"/>
-    </div>
-    <div>
-        <label for="tel">Telefone:</label>
-        <input type="text" id="tel"/>
-    </div>
-    <div>
-            <label for="ComoConOp">Como nos conheceu:</label>
-            <select id="ComoConOp">
-                <option value="Tv">Tv</option>
-                <option value="Internet">Internet</option>
-                <option value="outros">outros</option>
-            </select>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Formulario EloGroup</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="formularioStyle.css" rel="stylesheet" media="all"/>
+    <script type="text/javascript" src="validar-form.js"></script>
+</head>
+<body>
+    <form name="formulario" action="validar-form" method="POST">
+        <div >
+            <h1>Formulario</h1>
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome"/>
+            </div>
+            <div>
+                <label for="tel">Telefone:</label>
+                <input type="text" id="tel"/>
+            </div>
+            <div>
+                <label for="ComoConOp">Como nos conheceu:</label>
+                <select id="ComoConOp">
+                    <option value="Tv">Tv</option>
+                    <option value="Internet">Internet</option>
+                    <option value="outros">outros</option>
+                </select>
+            </div>
+            <div>
+                <label for="midia">Possui midia social:</label>
+                <input type="radio" id="Sim" name="midia" value="Sim">
+                <label for="Sim">Sim</label>
+                <input type="radio" id="Nao" name="midia" value="Nao">
+                <label for="Nao">Nao</label>
+            </div>
+            <div>
+                <label for="Quais">Quais:</label>
+                <div>
+                        <input type="checkbox" id=Facebook name="Facebook">
+                        <label for="Facebook">Facebook</label>
+                        
+                        <input type="checkbox" id=LinkedIn name="LinkedIn">
+                        <label for="LinkedIn">LinkedIn</label>
+                        
+                        <input type="checkbox" id=Instagram name="Instagram">
+                        <label for="Instagram">Instagram</label>
+                </div>
+                
+            </div>  
+            <div>
+                <input class="btn btn-secondary" type="reset" value="Limpar">
+                <input class="btn btn-primary" type="submit" value="Confirmar" onclick="return validar()">
+            </div>
         </div>
-    <div>
-        <label for="midia">Possui midia social:</label>
-        <input type="radio" id="Sim" name="midia" value="Sim">
-        <label for="Sim">Sim</label>
-        <input type="radio" id="Nao" name="midia" value="Nao">
-        <label for="Nao">Nao</label>
-    </div>
-    <div>
-        <label for="Quais">Quais:</label>
-        <input type="checkbox" id=Facebook name="Facebook">
-        <label for="Facebook">Facebook</label>
-
-        <input type="checkbox" id=LinkedIn name="LinkedIn">
-        <label for="LinkedIn">LinkedIn</label>
-
-        <input type="checkbox" id=Instagram name="Instagram">
-        <label for="Instagram">Instagram</label>
-
-    </div>
-
-    <div>
-        <button type="button">Confirmar</button>
-    </div>
-</form>
+    </form>
+                        
             
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
