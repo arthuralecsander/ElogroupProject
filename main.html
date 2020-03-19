@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Formulario EloGroup</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="formularioStyle.css" rel="stylesheet" media="all"/>
     <script type="text/javascript" src="validar-form.js"></script>
 </head>
 <body>
-    <form name="formulario" action="validar-form" method="POST">
+    <form name="formulario" >
         <div >
             <h1>Formulario</h1>
             <div>
@@ -19,8 +20,8 @@
                 <input type="text" id="tel"/>
             </div>
             <div>
-                <label for="ComoConOp">Como nos conheceu:</label>
-                <select id="ComoConOp">
+                <label for="comoConOp">Como nos conheceu:</label>
+                <select id="comoConOp">
                     <option value="Tv">Tv</option>
                     <option value="Internet">Internet</option>
                     <option value="outros">outros</option>
@@ -34,7 +35,7 @@
                 <label for="Nao">Nao</label>
             </div>
             <div>
-                <label for="Quais">Quais:</label>
+                <label for="quais">Quais:</label>
                 <div>
                         <input type="checkbox" id=Facebook name="Facebook">
                         <label for="Facebook">Facebook</label>
@@ -49,7 +50,7 @@
             </div>  
             <div>
                 <input class="btn btn-secondary" type="reset" value="Limpar">
-                <input class="btn btn-primary" type="submit" value="Confirmar" onclick="return validar()">
+                <input class="btn btn-primary" type="submit" value="Confirmar" onclick="return Validar()">
             </div>
         </div>
     </form>
