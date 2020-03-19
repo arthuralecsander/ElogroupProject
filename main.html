@@ -12,20 +12,28 @@
         <div >
             <h1>Formulario</h1>
             <div>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome"/>
+                <label for="nome">Nome</label>
+                <div>
+                    <input type="text" id="nomeid" placeholder="Nome" required="required" name="nome" />
+                </div>
+			    
             </div>
             <div>
                 <label for="tel">Telefone:</label>
-                <input type="text" id="tel"/>
+                <div>
+                    <input type="text" id="tel" placeholder="xx-xxxxxxxx" name="telefone"/>
+                </div>
             </div>
             <div>
                 <label for="comoConOp">Como nos conheceu:</label>
-                <select id="comoConOp">
-                    <option value="Tv">Tv</option>
-                    <option value="Internet">Internet</option>
-                    <option value="outros">outros</option>
-                </select>
+                <div>
+                    <select id="comoComId" form="formid">
+                        <option value="Tv">Tv</option>
+                        <option value="Internet">Internet</option>
+                        <option value="outros">outros</option>
+                    </select>
+                </div>
+                <input type="hidden" name="ComoConheceu" id="ComoConheceuId">
             </div> 
             <div>
                 <label for="midia">Possui midia social:</label>

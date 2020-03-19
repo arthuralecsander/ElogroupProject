@@ -1,11 +1,13 @@
 function Validar(){
     var formu = document.forms['formulario'];
     var fNome = formu.nome.value;
-    var fTel = formu.tel.value;
+    var fTel = formu.tel.value
+    var Matches = /[A-z]/g;
+    $('#ComoConheceuId').val($('#comoComId').children("option:selected").val());
 
     var error = false;
     if(fNome == ""){
-        alert('Campo nao pode ser vazio');
+        alert('Nome nao pode ser vazio');
         formu.nome.focus();
         error = true;
         
@@ -13,15 +15,24 @@ function Validar(){
         alert('Preencha com pelo menos um sobrenome');
         error=true;
     }
+    if((fTel.match(Matches) != null)){
+        alert('Apenas Numeros');
+        error=true;
+    }
     if(fTel.length != 11){
         alert('Telefone invalido');
         error=true;
-
+    
     }else if(fTel.substring(2,3)!="-"){
-        alert('Formato de telefone incorreto xx-xxxxxxxx');
+        alert('Formato de telefone incorreto, formato corerto: xx-xxxxxxxx');
         error=true;
-
+    
+        
+    }else if(fTel = ""){
+        $('#tel').value("");
+        error=false;
     }
+    
     if(error){
         return false;
     }else{
@@ -64,10 +75,9 @@ function ConverterJSON(form) {
 	var array = jQuery(form).serializeArray();
 	var json = {};
 
-	jQuery.each(array, function () {
-		if (this.name === 'redesocial') {
-		} else {
-			json[this.name] = this.value || '';
+	jQuery.each(array, function () { 
+		if (this.name != 'redesocial') {
+            json[this.name] = this.value || '';
 		}
 	}
 	);

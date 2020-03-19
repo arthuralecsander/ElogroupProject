@@ -10,10 +10,16 @@ h1{
 }
 
 form{
-
     text-align: center;
+    margin-top: 5%;
     font-size: large;
 }
 .btn-primary{
-    margin-left: 5%;
+    margin-left: 172px;
+}
+
+input[type=text], select, textarea {
+    width: 350px;
+    border-radius: 4px;
+    margin-left: 0;
 }
