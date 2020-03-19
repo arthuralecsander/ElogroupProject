@@ -8,7 +8,7 @@
     <script type="text/javascript" src="validar-form.js"></script>
 </head>
 <body>
-    <form name="formulario" >
+    <form name="formulario" id="formid">
         <div >
             <h1>Formulario</h1>
             <div>
@@ -29,21 +29,34 @@
             </div>
             <div>
                 <label for="midia">Possui midia social:</label>
-                <input type="radio" id="Sim" name="midia" value="Sim">
+                <input type="radio" id="Sim" name="midia" value="Sim" checked>
                 <label for="Sim">Sim</label>
                 <input type="radio" id="Nao" name="midia" value="Nao">
                 <label for="Nao">Nao</label>
+                
+                <script type="text/javascript">
+                $('input[name="midia"]').change(function () {
+                    if ($('input[name="midia"]:checked').val() === "Sim") {
+                        $('.sociais').show();
+                    } else {
+                        $('.sociais').hide();
+                        $('#facebookid').prop("checked", false);
+                        $('#linkedInid').prop("checked", false);
+                        $('#instagramid').prop("checked", false);
+                    }
+                });
+                </script>
             </div>
-            <div>
+            <div class="sociais">
                 <label for="quais">Quais:</label>
                 <div>
-                        <input type="checkbox" id=Facebook name="Facebook">
+                        <input type="checkbox" id=facebookid name="redesocial" value="FB">
                         <label for="Facebook">Facebook</label>
                         
-                        <input type="checkbox" id=LinkedIn name="LinkedIn">
+                        <input type="checkbox" id=linkedInid name="redesocial" value="LI">
                         <label for="LinkedIn">LinkedIn</label>
                         
-                        <input type="checkbox" id=Instagram name="Instagram">
+                        <input type="checkbox" id=instagramid name="redesocial" value="IG">
                         <label for="Instagram">Instagram</label>
                 </div>
                 
